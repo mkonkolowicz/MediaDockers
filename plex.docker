@@ -1,0 +1,12 @@
+sudo docker create \
+--name=plex \
+--net=host \
+--restart=always \
+-e VERSION=latest \
+-e PUID=1001 -e PGID=1001 \
+-e TZ=Europe/London \
+-v /home/docker/plex/config:/config \
+-v /home/docker/plex/tvshows:/data/tvshows \
+-v /home/docker/plex/movies:/data/movies \
+-v /home/docker/plex/transcode:/transcode \
+linuxserver/plex
