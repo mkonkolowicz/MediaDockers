@@ -4,9 +4,9 @@ sudo docker create \
 --restart=always \
 -e VERSION=latest \
 -e PUID=1001 -e PGID=1001 \
--e TZ=Europe/London \
+-e TZ=America/Toronto \
 -v /home/docker/plex/config:/config \
--v /home/docker/plex/tvshows:/data/tvshows \
--v /home/docker/plex/movies:/data/movies \
+-v /home/docker/plex/tvshows:/tvshows \
+-v /home/docker/plex/movies:/movies \
 -v /home/docker/plex/transcode:/transcode \
 linuxserver/plex
