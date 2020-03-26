@@ -6,7 +6,7 @@ sudo docker create \
   -p 8080:8080 \
   -p 9090:9090 \
   -v path to data:/config \
-  -v path to downloads:/home/docker/downloads \
-  -v path to incomplete downloads:/home/docker/incomplete-downloads `#optional` \
+  -v path to downloads:/home/docker/sabnzbd/downloads \
+  -v path to incomplete downloads:/home/docker/sabnzbd/incomplete-downloads `#optional` \
   --restart unless-stopped \
-  linuxserver/sabnzbd:latest
+  linuxserver/sabnzbd
