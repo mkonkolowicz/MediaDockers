@@ -3,7 +3,7 @@ sudo docker create \
 --net=host \
 --restart=always \
 -e VERSION=latest \
--e PUID=1001 -e PGID=1001 \
+-e PUID=1000 -e PGID=1000 \
 -e TZ=America/Toronto \
 -v /home/docker/plex/config:/config \
 -v /home/docker/plex/tvshows:/tvshows \
