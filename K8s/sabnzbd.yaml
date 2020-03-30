@@ -1,0 +1,68 @@
+---
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: sabnzbd-deployment
+      labels:
+        app: sabnzbd
+    spec:
+      replicas: 1
+      selector:
+         matchLabels:
+           app: sabnzbd
+      template:
+        metadata:
+          labels:
+            app: sabnzbd
+    
+        spec:
+         containers:
+            - name: sabnzbd
+              image: linuxserver/sabnzbd
+              ports:
+                - containerPort: 8080
+                  protocol: TCP
+              env:
+                - name: SABNZBD_UID
+                  value: "1000"
+                - name: SABNZBD_GID
+                  value: "1000"
+              volumeMounts:
+                - mountPath: /downloads
+                  name: sabnzbd-downloads
+                - mountPath: /incomplete-downloads
+                  name: sabnzbd-incomplete
+                - mountPath: /tvshows
+                  name: plex-tvshows
+                - mountPath: /movies
+                  name: plex-movies
+
+         volumes:
+           - name: sabnzbd-config
+             hostPath:
+               path: /home/docker/sabnzbd/config
+           - name: sabnzbd-downloads
+             hostPath:
+               path: /home/docker/sabnzbd/downloads
+           - name: sabnzbd-incomplete
+             hostPath:
+               path: /home/docker/sabnzbd/incomplete-downloads
+           - name: plex-tvshows
+             hostPath:
+               path: /home/docker/plex/tvshows
+           - name: plex-movies
+             hostPath:
+               path: /home/docker/plex/movies
+---
+   kind: Service
+   apiVersion: v1
+   metadata:
+     name: sabnzbd-service
+   spec:
+     selector:
+       app: sabnzbd
+     ports:
+     - protocol: TCP
+       port: 8080
+       targetPort: 8080
+     type: NodePort
