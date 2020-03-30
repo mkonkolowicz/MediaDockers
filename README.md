@@ -7,3 +7,5 @@
 
 ## Kubernetes Based Setup
 * https://www.mindthevirt.com/running-usenet-stack-on-kubernetes/
+* https://kubernetes.io/docs/concepts/services-networking/service/#nodeport
+* https://kubernetes.io/docs/reference/kubectl/cheatsheet/
