@@ -36,6 +36,8 @@
                   name: plex-tvshows
                 - mountPath: /movies
                   name: plex-movies
+                - mountPath: /config
+                  name: sabnzbd-config
 
          volumes:
            - name: sabnzbd-config
