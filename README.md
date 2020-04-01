@@ -9,3 +9,4 @@
 * https://www.mindthevirt.com/running-usenet-stack-on-kubernetes/
 * https://kubernetes.io/docs/concepts/services-networking/service/#nodeport
 * https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+* https://kauri.io/57-selfhost-your-media-center-on-kubernetes-with-p/8ec7c8c6bf4e4cc2a2ed563243998537/a (WIP)
