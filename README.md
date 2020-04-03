@@ -1,4 +1,7 @@
 # MediaDockers
+## Dev (One Node, local) K8s Cluster Setup
+* https://ubuntu.com/tutorials/install-a-local-kubernetes-with-microk8s#1-overview
+
 ## Docker Based Setup
 * https://hub.docker.com/r/linuxserver/sabnzbd
 * https://smallbusiness.chron.com/give-permissions-ubuntu-33174.html
