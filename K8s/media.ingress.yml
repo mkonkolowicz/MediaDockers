@@ -1,0 +1,17 @@
+# media.ingress.yml
+---
+    apiVersion: extensions/v1beta1
+    kind: Ingress
+    metadata:
+      namespace: "media"
+      name: "media-ingress"
+    spec:
+      rules:
+      - host: "media.192.168.0.240.nip.io"
+        http:
+          paths:
+            - backend:
+                serviceName: "plex-kube-plex"
+                servicePort: 32400
+              path: "/"
+---

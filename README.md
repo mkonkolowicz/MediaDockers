@@ -9,7 +9,13 @@
 * https://www.smarthomebeginner.com/install-plex-using-docker/
 
 ## Kubernetes Based Setup
+### Sabnzbd
 * https://www.mindthevirt.com/running-usenet-stack-on-kubernetes/
 * https://kubernetes.io/docs/concepts/services-networking/service/#nodeport
 * https://kubernetes.io/docs/reference/kubectl/cheatsheet/
-* https://kauri.io/57-selfhost-your-media-center-on-kubernetes-with-p/8ec7c8c6bf4e4cc2a2ed563243998537/a (WIP)
+### Plex
+* https://kauri.io/57-selfhost-your-media-center-on-kubernetes-with-p/8ec7c8c6bf4e4cc2a2ed563243998537/a (WIP..everything beneath is related to this tutorial)
+* https://helm.sh/docs/intro/using_helm/
+* https://microk8s.io/docs/commands (helm)
+* https://github.com/ubuntu/microk8s/issues/695
+* 
